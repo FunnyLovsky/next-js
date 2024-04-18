@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Main = () => {
+const Index = () => {
     return (
         <>
-            <Link href={'/about'}>About</Link>
+            <Link href={'/shop'}>Shop</Link>
             <h1>Hellddo Next!</h1>
 
             <style jsx>
@@ -18,4 +18,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Index
