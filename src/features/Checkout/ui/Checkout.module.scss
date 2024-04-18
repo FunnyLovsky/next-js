@@ -1,0 +1,91 @@
+@import '@/app/styles/variables';
+
+.terminal {
+    width: 40%;
+    height: 100%;
+    padding: 20px 24px;
+    border-radius: 20px;
+    border: 1px solid $stroke_color;
+
+    & h2 {
+        margin-bottom: 24px;
+    }
+
+    & a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    & span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    & h4 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    &:nth-child(3) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $stroke_color;
+        & span {
+            color: $discount_precent_color;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 800px) {
+    .terminal {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .terminal {
+        width: 100%;
+
+        & h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .cont {
+        margin-bottom: 20px;
+
+        & span {
+            font-size: 16px;
+        }
+
+        & h4 {
+            font-size: 16px;
+        }
+
+        &:nth-child(3) {
+            padding-bottom: 20px;
+        }
+
+        &:nth-child(4) span {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 375px) {
+}

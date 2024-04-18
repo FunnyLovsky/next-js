@@ -1,0 +1,98 @@
+@import '@/app/styles/variables';
+
+.name_small {
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    transition: 0.3s;
+
+    color: $black_color;
+}
+
+.name_big {
+    font-size: 35px;
+    font-weight: bold;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // text-wrap: nowrap;
+    transition: 0.3s;
+
+    color: $black_color;
+}
+
+.rating_cont_small {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & svg {
+        width: 18px;
+        height: 18px;
+        color: #ffc633;
+    }
+}
+
+.rating_cont_big {
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & svg {
+        width: 24px;
+        height: 24px;
+        color: #ffc633;
+    }
+}
+
+.rating_small {
+    font-size: 14px;
+    color: $black_color;
+    & span {
+        color: $paragph_color;
+    }
+}
+
+.rating_big {
+    font-size: 16px;
+    color: $black_color;
+    & span {
+        color: $paragph_color;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 600px) {
+    .name_small {
+        font-size: 16px;
+    }
+
+    .rating_small {
+        font-size: 12px;
+    }
+
+    .rating_cont_small {
+        gap: 8px;
+        & svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 375px) {
+}

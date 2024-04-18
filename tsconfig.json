@@ -17,7 +17,11 @@
                 "name": "next"
             }
         ],
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": ["src/app/types/next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
     "exclude": ["node_modules"]

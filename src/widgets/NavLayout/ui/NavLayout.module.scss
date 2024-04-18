@@ -1,0 +1,17 @@
+@import '@/app/styles/variables';
+
+.main {
+    padding-top: 92px;
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        padding-top: 75px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main {
+        padding-top: 71px;
+    }
+}

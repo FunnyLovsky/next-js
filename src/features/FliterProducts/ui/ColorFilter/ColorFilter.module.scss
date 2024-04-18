@@ -1,0 +1,12 @@
+@import '@/app/styles/variables';
+
+.colors {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 12px;
+
+    & button {
+        font-size: 14px;
+    }
+}

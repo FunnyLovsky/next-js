@@ -1,7 +1,15 @@
+import Head from 'next/head'
 import Category from '../../src/pages/Category'
 
 const Shop = ({ data }) => {
-    return <Category data={data} />
+    return (
+        <>
+            <Head>
+                <title>Shop</title>
+            </Head>
+            <Category data={data} />
+        </>
+    )
 }
 
 export default Shop

@@ -1,0 +1,51 @@
+@import '@/app/styles/variables';
+
+.cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 36px;
+}
+
+.info {
+    width: 50%;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 20px;
+    color: $paragph_color;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+    .cont {
+        flex-wrap: wrap;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cont {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .description {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 375px) {
+}

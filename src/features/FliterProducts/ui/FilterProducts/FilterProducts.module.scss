@@ -1,0 +1,89 @@
+@import '@/app/styles/variables';
+
+.filters_page {
+    width: 295px;
+    height: 100%;
+    padding: 20px 24px;
+    border: 1px solid $stroke_color;
+    border-radius: 20px;
+
+    & span {
+        display: block;
+    }
+}
+
+.filters_modal {
+    width: 100%;
+    height: 100%;
+    padding: 20px 24px;
+    border: 1px solid $stroke_color;
+    border-radius: 20px;
+    overflow: scroll;
+
+    & span {
+        display: block;
+    }
+}
+
+.title {
+    margin-bottom: 4px;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    & svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+.delete {
+    transition: 0.3s;
+    cursor: pointer;
+    color: $discount_precent_color;
+
+    &:hover {
+        color: lighten($color: $discount_precent_color, $amount: 10px);
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
+.icon {
+    color: $paragph_color;
+}
+
+@media screen and (max-width: 1024px) {
+    .filters_page {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .filters_page {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 375px) {
+}

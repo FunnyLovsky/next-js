@@ -1,0 +1,112 @@
+@import '@/app/styles/variables';
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.cont {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.sidebar {
+    border: 1px solid $stroke_color;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.main {
+    width: 75%;
+
+    & span {
+        display: inline-block;
+    }
+}
+
+.head {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.text {
+    & p {
+        margin-bottom: 5px;
+    }
+}
+
+.btns {
+    & button {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 800px) {
+    .cont {
+        flex-wrap: wrap;
+    }
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btns {
+        display: flex;
+        gap: 15px;
+    }
+
+    .head {
+        margin-bottom: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .title {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btns {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sidebar {
+        width: 100%;
+        display: block;
+    }
+
+    .head {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+}

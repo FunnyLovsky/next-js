@@ -1,0 +1,30 @@
+@import '@/app/styles/variables';
+
+.back {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: start 0.2s ease-in-out forwards;
+}
+
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
