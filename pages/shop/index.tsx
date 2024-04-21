@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Category from '../../src/pages/Category'
+import { NavLayout } from '@/widgets/NavLayout'
 
 const Shop = ({ data }) => {
     return (
@@ -7,7 +8,9 @@ const Shop = ({ data }) => {
             <Head>
                 <title>Shop</title>
             </Head>
-            <Category data={data} />
+            <NavLayout>
+                <Category data={data} />
+            </NavLayout>
         </>
     )
 }
