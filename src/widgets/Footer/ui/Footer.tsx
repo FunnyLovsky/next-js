@@ -1,5 +1,4 @@
 import { RoutesName } from '@/app/providers/router'
-
 import styles from './Footer.module.scss'
 import Container from '@/shared/ui/Container'
 import TWITTER from '@/shared/assets/icons/twitter.svg'
@@ -11,7 +10,6 @@ import PAYPAL from '@/shared/assets/icons/paypal.svg'
 import APPLE_PAY from '@/shared/assets/icons/a_pay.svg'
 import GOOGLE_PAY from '@/shared/assets/icons/g_pay.svg'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Footer = () => {
     return (
@@ -29,7 +27,7 @@ const Footer = () => {
                                 <TWITTER />
                             </a>
                             <a href="https://facebook.com/" target="_blank" rel="noreferrer">
-                                <FACEBOOK />
+                                <FACEBOOK width={16} height={16} />
                             </a>
                             <a href="https://github.com/" target="_blank" rel="noreferrer">
                                 <GITHUB />
@@ -61,7 +59,7 @@ const Footer = () => {
                 <div className={styles.info}>
                     <div className={styles.reserved}>Glamify © 2000-2024, Все права защищены</div>
                     <div className={styles.cards}>
-                        {/* <div className={styles.card}>
+                        <div className={styles.card}>
                             <VISA />
                         </div>
                         <div className={styles.card}>
@@ -75,7 +73,7 @@ const Footer = () => {
                         </div>
                         <div className={styles.card}>
                             <GOOGLE_PAY />
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </Container>

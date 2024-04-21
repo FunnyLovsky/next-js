@@ -50,6 +50,7 @@
             width: 16px;
             height: 16px;
             transition: 0.3s;
+            fill: $black_color;
         }
 
         &:hover {
@@ -57,7 +58,7 @@
             border-color: $black_color;
 
             & svg {
-                color: $bg_white_color;
+                fill: $bg_white_color;
             }
         }
     }

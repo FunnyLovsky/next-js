@@ -11,7 +11,6 @@ const Shop = ({ data }) => {
             </Head>
             <NavLayout>
                 <Category data={data} />
-                <Footer />
             </NavLayout>
         </>
     )

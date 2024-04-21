@@ -89,12 +89,12 @@ const Header = () => {
                     </div>
                 </nav>
             </Conatiner>
-            <Modal ref={searchRef}>
+            {/* <Modal ref={searchRef}>
                 <SearchModal onClose={() => searchRef.current!.close()} />
             </Modal>
             <Modal ref={burgerRef} withAnimation={true}>
                 <BurgerModal onClose={() => burgerRef.current!.close()} />
-            </Modal>
+            </Modal> */}
         </header>
     )
 }

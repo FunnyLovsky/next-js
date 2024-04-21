@@ -1,10 +1,10 @@
 // import { useAppDispatch } from '@/app/providers/StoreProvider/lib/hooks'
-import { authUser } from '@/entities/User'
+// import { authUser } from '@/entities/User'
 import { Header } from '@/widgets/Header'
 import { useEffect } from 'react'
 import styles from './NavLayout.module.scss'
 import { Footer } from '@/widgets/Footer'
-import { fetchProductsLS } from '@/entities/Cart'
+// import { fetchProductsLS } from '@/entities/Cart'
 
 const NavLayout = ({ children }) => {
     console.log('navlayou')
@@ -20,9 +20,9 @@ const NavLayout = ({ children }) => {
 
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <main className={styles.main}>{children}</main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
