@@ -1,5 +1,5 @@
 import { RoutesName } from '@/app/providers/router'
-import { Link } from 'react-router-dom'
+
 import styles from './Footer.module.scss'
 import Container from '@/shared/ui/Container'
 import TWITTER from '@/shared/assets/icons/twitter.svg'
@@ -10,8 +10,10 @@ import MASTERCARD from '@/shared/assets/icons/mastercard.svg'
 import PAYPAL from '@/shared/assets/icons/paypal.svg'
 import APPLE_PAY from '@/shared/assets/icons/a_pay.svg'
 import GOOGLE_PAY from '@/shared/assets/icons/g_pay.svg'
+import Link from 'next/link'
+import Image from 'next/image'
 
-const Header = () => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <Container>
@@ -36,30 +38,30 @@ const Header = () => {
                     </div>
                     <div className={styles.inner}>
                         <h2>Компания</h2>
-                        <Link to={RoutesName.MAIN}>О нас</Link>
-                        <Link to={RoutesName.MAIN}>Особенности</Link>
-                        <Link to={RoutesName.MAIN}>Каталог</Link>
-                        <Link to={RoutesName.MAIN}>Карьера</Link>
+                        <Link href={RoutesName.MAIN}>О нас</Link>
+                        <Link href={RoutesName.MAIN}>Особенности</Link>
+                        <Link href={RoutesName.MAIN}>Каталог</Link>
+                        <Link href={RoutesName.MAIN}>Карьера</Link>
                     </div>
                     <div className={styles.inner}>
                         <h2>Помощь</h2>
-                        <Link to={RoutesName.MAIN}>Поддержка клиентов</Link>
-                        <Link to={RoutesName.MAIN}>Детали доставки</Link>
-                        <Link to={RoutesName.MAIN}>Условия использования</Link>
-                        <Link to={RoutesName.MAIN}>Политика конфиденциальности</Link>
+                        <Link href={RoutesName.MAIN}>Поддержка клиентов</Link>
+                        <Link href={RoutesName.MAIN}>Детали доставки</Link>
+                        <Link href={RoutesName.MAIN}>Условия использования</Link>
+                        <Link href={RoutesName.MAIN}>Политика конфиденциальности</Link>
                     </div>
                     <div className={styles.inner}>
                         <h2>Вопросы</h2>
-                        <Link to={RoutesName.MAIN}>Учетная запись</Link>
-                        <Link to={RoutesName.MAIN}>Управление доставками</Link>
-                        <Link to={RoutesName.MAIN}>Заказы</Link>
-                        <Link to={RoutesName.MAIN}>Платежи</Link>
+                        <Link href={RoutesName.MAIN}>Учетная запись</Link>
+                        <Link href={RoutesName.MAIN}>Управление доставками</Link>
+                        <Link href={RoutesName.MAIN}>Заказы</Link>
+                        <Link href={RoutesName.MAIN}>Платежи</Link>
                     </div>
                 </div>
                 <div className={styles.info}>
                     <div className={styles.reserved}>Glamify © 2000-2024, Все права защищены</div>
                     <div className={styles.cards}>
-                        <div className={styles.card}>
+                        {/* <div className={styles.card}>
                             <VISA />
                         </div>
                         <div className={styles.card}>
@@ -73,7 +75,7 @@ const Header = () => {
                         </div>
                         <div className={styles.card}>
                             <GOOGLE_PAY />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Container>
@@ -81,4 +83,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Footer
