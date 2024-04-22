@@ -28,13 +28,15 @@
     & svg {
         transition: 0.3s;
     }
-}
 
-input:checked {
-    + svg {
-        transform: rotate(90deg);
+    input:checked {
+        + svg {
+            transform: rotate(90deg);
+        }
     }
 }
+
+
 
 .filter {
     padding-top: 24px;

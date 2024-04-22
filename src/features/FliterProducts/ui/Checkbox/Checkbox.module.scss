@@ -56,15 +56,17 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    input[type='checkbox'] {
+        background: $black_color;
+    }
 }
 
-input[type='checkbox'] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
-input[type='checkbox'] {
-    background: $black_color;
-}

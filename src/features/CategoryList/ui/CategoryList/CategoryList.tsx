@@ -1,8 +1,8 @@
 import styles from './CategoryList.module.scss'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 import { mapPathName } from '@/widgets/Breadcrumb'
 import { Loader, Product } from '@/entities/Product'
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import { createArray } from '@/shared/lib/createArray'
 import NotFound from '@/shared/ui/NotFound'
 import SEARCH from '@/shared/assets/icons/search.svg'
@@ -11,13 +11,14 @@ import FilterModal from '../FilterModal/FilterModal'
 import { useRef } from 'react'
 import Modal from '@/shared/ui/Modal'
 import { ModalOptions } from '@/shared/types/ModalOptions'
+import { useRouter } from 'next/router'
 
 const CategoryList = () => {
-    const { pathname, search } = useLocation()
+    const { pathname, search } = new Location()
     const filterRef = useRef<ModalOptions>(null)
-    const { error, isLoading, products, totalCount, limit } = useAppSelector(
-        (state) => state.productListReducer
-    )
+    // const { error, isLoading, products, totalCount, limit } = useAppSelector(
+    //     (state) => state.productListReducer
+    // )
 
     const renderList = () => {
         if (error)
@@ -55,9 +56,9 @@ const CategoryList = () => {
     return (
         <div className={styles.cont_list}>
             <div className={styles.head}>
-                <h3>{title.title}</h3>
+                <h3>{title!.title}</h3>
                 <div className={styles.sort}>
-                    <button className={styles.icon} onClick={() => filterRef.current.open()}>
+                    <button className={styles.icon} onClick={() => filterRef.current!.open()}>
                         <FILTER />
                     </button>
                     {renderCountProduct()}
@@ -65,7 +66,7 @@ const CategoryList = () => {
             </div>
             {renderList()}
             <Modal ref={filterRef} withAnimation={true}>
-                <FilterModal onClose={() => filterRef.current.close()} />
+                <FilterModal onClose={() => filterRef.current!.close()} />
             </Modal>
         </div>
     )

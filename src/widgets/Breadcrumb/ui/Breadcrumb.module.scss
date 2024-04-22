@@ -46,10 +46,19 @@
 }
 
 @media screen and (max-width: 800px) {
-    .link a,
-    p {
+    .link {
+        & a {
+            font-size: 14px;
+        }
+
+        
+    & p {
         font-size: 14px;
     }
+    }
+
+
+
 
     .breadcrumb {
         margin: 24px 0 12px;

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Category from '../../src/pages/Category'
+
 import { NavLayout } from '@/widgets/NavLayout'
 import { Footer } from '@/widgets/Footer'
 import { MetaLayout } from '@/widgets/MetaLayout'

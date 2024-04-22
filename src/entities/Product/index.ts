@@ -10,15 +10,16 @@ import Loader from './ui/Loader/Loader'
 import Price from './ui/Price/Price'
 import Product from './ui/Product/Product'
 
-export {
-    productListSlice as productListReducer,
-    setPage,
-    setLoding,
-    fetchProductList,
-    setQuery,
-    useFetchProducts,
-}
-export { productSlice as productReducer, clearProduct, setIsLoding, fetchProductDetail }
+export {useFetchProducts}
+// export {
+//     productListSlice as productListReducer,
+//     setPage,
+//     setLoding,
+//     fetchProductList,
+//     setQuery,
+//     useFetchProducts,
+// }
+// export { productSlice as productReducer, clearProduct, setIsLoding, fetchProductDetail }
 export { Product, Price, Info, Services, Loader, ColorBtn }
 
 export type { IProduct, IProductDetail, Colors } from './types/IProduct'

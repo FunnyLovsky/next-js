@@ -2,8 +2,8 @@ import styles from './FilterProducts.module.scss'
 import AppButton from '@/shared/ui/AppButton'
 import { FC, useState } from 'react'
 import { Filters } from '../../types/Filters'
-import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
-import { setQuery } from '@/entities/Product'
+// import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { setQuery } from '@/entities/Product'
 import GenderFliter from '../GenderFilter/GenderFilter'
 import CategoryFliter from '../CategoryFilter/CategoryFilter'
 import SizeFilter from '../SizeFilter/SizeFilter'
@@ -29,8 +29,9 @@ interface IProps {
 }
 
 const FilterProducts: FC<IProps> = ({ type = 'page', onClose = null }) => {
-    const { isLoading } = useAppSelector((state) => state.productListReducer)
-    const dispatch = useAppDispatch()
+    const isLoading = false
+    // const { isLoading } = useAppSelector((state) => state.productListReducer)
+    // const dispatch = useAppDispatch()
     const [filters, setFilters] = useState<Filters>(emptyFilter)
 
     const onCreateQueryReq = () => {
@@ -41,12 +42,12 @@ const FilterProducts: FC<IProps> = ({ type = 'page', onClose = null }) => {
         if (onClose) onClose()
 
         const query = createQueryRequest(filters)
-        dispatch(setQuery(query))
+        // dispatch(setQuery(query))
     }
 
     const resetFilters = () => {
         setFilters(emptyFilter)
-        dispatch(setQuery(''))
+        // dispatch(setQuery(''))
     }
     return (
         <div className={styles[`filters_${type}`]}>

@@ -12,5 +12,7 @@ export const getProductCategory = (product: IProductDetail, pathname: string) =>
             { to: `/${path}?gender=${gender}&category=${category}`, title: pathCategory[category] },
             { to: `${pathname}`, title: name },
         ]
+    } else {
+        return []
     }
 }

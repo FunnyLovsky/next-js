@@ -1,9 +1,10 @@
 // import styles from './FilterProducts.module.scss'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 import { FC } from 'react'
 import { Filters } from '../../types/Filters'
 import Filter from '../Filter/Filter'
 import Checkbox from '../Checkbox/Checkbox'
+import { useRouter } from 'next/router'
 
 interface IProps {
     filters: Filters
@@ -11,9 +12,8 @@ interface IProps {
 }
 
 const GenderFliter: FC<IProps> = ({ filters, onChange }) => {
-    const { search } = useLocation()
-    const searchParams = new URLSearchParams(search)
-    const gender = searchParams.get('gender')
+    const { query } = useRouter()
+    const { gender } = query
 
     const onChangeGender = (gender: 'Men' | 'Women') => {
         if (gender == filters.gender) {

@@ -1,7 +1,8 @@
+import { ParsedUrlQuery } from 'querystring'
 import { pathCategory } from '../const/pathCategory'
 import { routePaths } from '../const/routePaths'
 
-export const mapPathName = (pathname: string, search: string) => {
+export const mapPathName = (pathname: string, search:  ParsedUrlQuery) => {
     const crumbs = pathname
         .split('/')
         .filter((path) => routePaths[`/${path}`])
@@ -10,35 +11,30 @@ export const mapPathName = (pathname: string, search: string) => {
             title: routePaths[`/${path}`],
         }))
 
-    if (search !== '') {
-        const paths = []
-        const searchParams = new URLSearchParams(search)
 
-        const gender = searchParams.get('gender')
-        if (gender) {
+    const paths: {to: string, title: string}[] = []
+
+    const {gender, category, name} = search
+
+    if (gender && !Array.isArray(gender) ) {
             paths.push({ to: `${pathname}?gender=${gender}`, title: pathCategory[gender] })
-        }
-
-        const category = searchParams.get('category')
-
-        if (category) {
-            paths.push({
-                to: `${pathname}?gender=${gender}&category=${category}`,
-                title: pathCategory[category],
-            })
-        }
-
-        const name = searchParams.get('name')
-
-        if (name) {
-            paths.push({
-                to: `${pathname}?name=${name}`,
-                title: name[0].toUpperCase() + name.substring(1),
-            })
-        }
-
-        crumbs.push(...paths)
     }
 
+    if (category && !Array.isArray(category)) {
+        paths.push({
+            to: `${pathname}?gender=${gender}&category=${category}`,
+            title: pathCategory[category],
+        })
+    }
+
+    if (name && !Array.isArray(name)) {
+        paths.push({
+            to: `${pathname}?name=${name}`,
+            title: name[0].toUpperCase() + name.substring(1),
+        })
+    }
+
+    crumbs.push(...paths)
+    
     return crumbs
 }
