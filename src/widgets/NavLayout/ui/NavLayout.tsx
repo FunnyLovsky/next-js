@@ -1,12 +1,16 @@
 // import { useAppDispatch } from '@/app/providers/StoreProvider/lib/hooks'
 // import { authUser } from '@/entities/User'
 import { Header } from '@/widgets/Header'
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import styles from './NavLayout.module.scss'
 import { Footer } from '@/widgets/Footer'
+import { IPropsChildren } from '@/shared/types/IComponents'
+import Head from 'next/head'
 // import { fetchProductsLS } from '@/entities/Cart'
 
-const NavLayout = ({ children }) => {
+interface IProps extends IPropsChildren {}
+
+const NavLayout: FC<IProps> = ({ children }) => {
     console.log('navlayou')
     // const dispatch = useAppDispatch()
 

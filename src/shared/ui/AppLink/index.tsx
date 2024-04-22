@@ -2,6 +2,7 @@ import { IPropsChildren } from '@/shared/types/IComponents'
 import { FC } from 'react'
 import styles from './AppLink.module.scss'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 interface IProps extends IPropsChildren {
     href: string
@@ -10,11 +11,14 @@ interface IProps extends IPropsChildren {
 }
 
 const AppLink: FC<IProps> = ({ href, children, type, onClick }) => {
+    const { pathname } = useRouter()
     const standart = styles[type]
     const active = [styles[`active_${type}`], styles[type]].join(' ')
 
+    const style = pathname.startsWith(href) ? active : standart
+
     return (
-        <Link href={href} className={standart} onClick={onClick}>
+        <Link href={href} className={style} onClick={onClick}>
             {children}
         </Link>
     )

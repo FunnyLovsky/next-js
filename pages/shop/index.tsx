@@ -9,9 +9,8 @@ const Shop = ({ data }) => {
             <Head>
                 <title>Shop</title>
             </Head>
-            <NavLayout>
-                <Category data={data} />
-            </NavLayout>
+
+            <Category data={data} />
         </>
     )
 }

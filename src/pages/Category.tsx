@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const routesName = {
@@ -15,7 +16,9 @@ const Category = ({ data }: { data: any[] }) => {
             </h1>
             <ul>
                 {data.map((item) => (
-                    <li key={item.id}>{item.name}</li>
+                    <Link href={`shop/${item.id}`}>
+                        <li key={item.id}>{item.name}</li>
+                    </Link>
                 ))}
             </ul>
         </>
