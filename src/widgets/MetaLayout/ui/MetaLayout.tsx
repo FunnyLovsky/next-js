@@ -1,7 +1,6 @@
 import { IPropsChildren } from '@/shared/types/IComponents'
 import Head from 'next/head'
 import { FC } from 'react'
-import favicon from '@/shared/assets/icons/favicon.svg?url'
 
 interface IProps extends IPropsChildren {
     title: string
@@ -35,7 +34,7 @@ const MetaLayout: FC<IProps> = ({ title, children }) => {
                     content="Широкий выбор стильной и модной одежды для женщин, мужчин и детей. Быстрая доставка и высокое качество."
                 />
                 <meta name="twitter:image" content="https://glamify-shop.vercel.app/favicon.svg" />
-                <link rel="icon" href={favicon.src} type="image/svg+xml" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
                 <title>{title}</title>
             </Head>
             {children}
