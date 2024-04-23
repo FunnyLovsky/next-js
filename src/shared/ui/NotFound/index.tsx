@@ -6,7 +6,7 @@ import { RoutesName } from '@/app/providers/router'
 interface IProps {
     title: string
     subtitle: string
-    icon: React.VFC<React.SVGProps<SVGSVGElement>>
+    icon: React.VFC<React.SVGProps<SVGElement>>
     type?: 'big' | 'small'
 }
 

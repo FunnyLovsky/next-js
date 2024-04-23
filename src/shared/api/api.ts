@@ -19,7 +19,7 @@ $api.interceptors.response.use(
             try {
                 const response = await Services.refresh()
                 console.log('refresh getUSers')
-                localStorage.setItem('token', response.data.accessToken)
+                // localStorage.setItem('token', response.data.accessToken)
                 return $api.request(originalRequedt)
             } catch (error) {
                 console.log('Не авторизован, пес')
@@ -30,7 +30,8 @@ $api.interceptors.response.use(
 )
 
 $api.interceptors.request.use((config) => {
-    config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
+    // config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
+    config.headers.Authorization = `Bearer`
     return config
 })
 

@@ -17,7 +17,7 @@ export class Services {
         try {
             return await $api.get<ProductsResponse>(`/products?${query}`)
         } catch (error) {
-            errorHandler(error)
+            return errorHandler(error)
         }
     }
 }

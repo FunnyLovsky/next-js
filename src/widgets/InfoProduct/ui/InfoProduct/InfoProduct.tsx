@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './InfoProduct.module.scss'
 import { Info, Price } from '@/entities/Product'
 import Images from '../Images/Images'
@@ -8,8 +8,8 @@ import Sizes from '../Sizes/Sizes'
 import CartController from '../CartController/CartController'
 
 const InfoProduct = () => {
-    const { productDetail } = useAppSelector((state) => state.productReducer)
-    const { cartProducts } = useAppSelector((state) => state.cartReducer)
+    // const { productDetail } = useAppSelector((state) => state.productReducer)
+    // const { cartProducts } = useAppSelector((state) => state.cartReducer)
     const [product, setProduct] = useState({
         color: productDetail.colors[0].name,
         size: productDetail.sizes[0],
