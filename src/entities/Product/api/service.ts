@@ -4,7 +4,6 @@ import { errorHandler } from '@/shared/lib/errorHandler'
 import { IProductDetail } from '../types/IProduct'
 import { ProductsResponse } from '../model/types/ProductsResponse'
 import { API_URL } from '@/shared/const/URL'
-import { get } from 'http'
 
 export class Services {
     static async getDetailProduct(url: string): Promise<AxiosResponse<IProductDetail>> {
@@ -40,7 +39,7 @@ export class Services {
             return response
             
         } catch (error) {
-            return errorHandler(error)
+            throw new Error(error.message)
         }
     }
 }
