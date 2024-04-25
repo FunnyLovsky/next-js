@@ -20,6 +20,7 @@ interface IProps {
 
 const ShopID: FC<IProps> = ({ product, error }) => {
     const title = product ? `${product.name} - GLAMIFY` : 'Товар не найден - GLAMIFY'
+
     return (
         <MetaLayout title={title}>
             <ProductDetailPage productDetail={product} error={error} />
