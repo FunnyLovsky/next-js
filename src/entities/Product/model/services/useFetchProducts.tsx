@@ -13,10 +13,8 @@ export const useFetchProducts = (query: string, limit: number = 4, page: number 
         try {
             setIsLoading(true)
             const product = await Services.getProductsCache(`limit=${limit}&page=${page}&${query}`)
-            console.log(product)
-
-            // setProducts(product.data.products)
-            // setIsLoading(false)
+            setProducts(product.data.products)
+            setIsLoading(false)
         } catch (error) {
             setProducts([])
             setIsLoading(false)
