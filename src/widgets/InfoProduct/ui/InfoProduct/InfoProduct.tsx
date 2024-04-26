@@ -10,6 +10,22 @@ import CartController from '../CartController/CartController'
 const InfoProduct = () => {
     // const { productDetail } = useAppSelector((state) => state.productReducer)
     // const { cartProducts } = useAppSelector((state) => state.cartReducer)
+    const productDetail = {
+            id: '',
+            name: '',
+            image: '',
+            rating: 0,
+            price: 0,
+            discount: null,
+            category: '',
+            gender: '',
+            style: '',
+            description: '',
+            sizes: [],
+            details: [[]],
+            colors: [],
+        },
+        cartProducts = []
     const [product, setProduct] = useState({
         color: productDetail.colors[0].name,
         size: productDetail.sizes[0],
@@ -34,8 +50,8 @@ const InfoProduct = () => {
         <div className={styles.cont}>
             <Images product={product} />
             <div className={styles.info}>
-                <Info data={productDetail} type="big" />
-                <Price data={productDetail} type="big" />
+                {/* <Info data={productDetail} type="big" />
+                <Price data={productDetail} type="big" /> */}
                 <p className={styles.description}>{productDetail.description}</p>
 
                 <Colors product={product} onChange={onChangeColor} productInCart={productInCart} />

@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './CartController.module.scss'
 import { FC } from 'react'
 import { AddProductCart } from '@/features/AddProductCart'
@@ -15,8 +15,11 @@ interface IProps {
 }
 
 const CartController: FC<IProps> = ({ product, productInCart }) => {
-    const { isLoading, error } = useAppSelector((state) => state.cartReducer)
-    const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    // const { isLoading, error } = useAppSelector((state) => state.cartReducer)
+    // const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    const isLoading = false,
+        authLoading = false,
+        error = null
 
     if (isLoading || authLoading) {
         return (

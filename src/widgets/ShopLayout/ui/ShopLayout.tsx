@@ -1,11 +1,11 @@
-import { Outlet } from 'react-router-dom'
+// import { Outlet } from 'react-router-dom'
 
-const ShopLayout = () => {
-    return (
-        <main>
-            <Outlet />
-        </main>
-    )
-}
+// const ShopLayout = () => {
+//     return (
+//         <main>
+//             <Outlet />
+//         </main>
+//     )
+// }
 
-export default ShopLayout
+// export default ShopLayout

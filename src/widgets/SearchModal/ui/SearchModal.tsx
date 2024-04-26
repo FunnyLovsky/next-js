@@ -3,10 +3,11 @@ import styles from './SearchModal.module.scss'
 import AppInput from '@/shared/ui/AppInput'
 import Conatiner from '@/shared/ui/Container'
 import { FC, useEffect, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import SEACRH from '@/shared/assets/icons/search.svg'
 import { useFetchProducts } from '@/entities/Product'
 import { RoutesName } from '@/app/providers/router'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 interface IProps {
     onClose: () => void
@@ -15,7 +16,7 @@ interface IProps {
 const SearchModal: FC<IProps> = ({ onClose }) => {
     const input = useRef<HTMLInputElement>()
     const [query, setQuery] = useState('')
-    const navigate = useNavigate()
+    const navigate = useRouter()
     const { isLoading, products } = useFetchProducts(`name=${query}`, 6)
 
     const onSearchProducts = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +26,7 @@ const SearchModal: FC<IProps> = ({ onClose }) => {
     const onSumbitSearch = (e: React.FormEvent<HTMLFormElement> = null) => {
         if (e) e.preventDefault()
 
-        navigate(`${RoutesName.SHOP}?name=${query}`)
+        navigate.push(`${RoutesName.SHOP}?name=${query}`)
         onClose()
     }
 
@@ -52,7 +53,7 @@ const SearchModal: FC<IProps> = ({ onClose }) => {
                     <div className={styles.results}>
                         {products.map((item) => (
                             <Link
-                                to={`${RoutesName.SHOP}/${item.url}`}
+                                href={`${RoutesName.SHOP}/${item.url}`}
                                 onClick={onClose}
                                 key={item.url}
                             >

@@ -5,10 +5,10 @@ import NOT_FOUND from '@/shared/assets/icons/image.svg'
 
 interface IProps {
     src: string
-    alt: string
+    alt?: string
 }
 
-const Image: FC<IProps> = ({ src, alt }) => {
+const Image: FC<IProps> = ({ src, alt = '' }) => {
     const [isLoad, setIsLoad] = useState(true)
     const [error, setError] = useState(false)
 

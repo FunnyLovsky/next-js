@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './Colors.module.scss'
 import { FC } from 'react'
 import LoaderBtn from '@/shared/ui/LoaderBtn'
@@ -14,9 +14,12 @@ interface IProps {
 }
 
 const Colors: FC<IProps> = ({ onChange, product, productInCart }) => {
-    const { productDetail } = useAppSelector((state) => state.productReducer)
-    const { isLoading } = useAppSelector((state) => state.cartReducer)
-    const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    // const { productDetail } = useAppSelector((state) => state.productReducer)
+    // const { isLoading } = useAppSelector((state) => state.cartReducer)
+    // const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    const isLoading = false,
+        authLoading = false,
+        productDetail = { colors: [] }
 
     const setSelectColor = () => {
         const { code } = productDetail.colors.find((color) => color.name == productInCart.color)

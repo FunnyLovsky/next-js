@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import AppForm from '@/shared/ui/AppForm'
 import styles from './PaymentModal.module.scss'
-import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import AppInput from '@/shared/ui/AppInput'
 import { FC, useEffect, useRef, useState } from 'react'
 import Conatiner from '@/shared/ui/Container'
-import { deleteProductAuth } from '@/entities/Cart'
-import { useNavigate } from 'react-router-dom'
+// import { deleteProductAuth } from '@/entities/Cart'
+// import { useNavigate } from 'react-router-dom'
 import { RoutesName } from '@/app/providers/router'
 
 interface IProps {
@@ -15,10 +15,14 @@ interface IProps {
 }
 
 const PaymentModal: FC<IProps> = ({ total, closeModal }) => {
-    const { isLoading, error, cartProducts } = useAppSelector((state) => state.cartReducer)
-    const dispatch = useAppDispatch()
-    const [value, setValue] = useState('')
-    const navigate = useNavigate()
+    // const { isLoading, error, cartProducts } = useAppSelector((state) => state.cartReducer)
+    // const dispatch = useAppDispatch()
+    // const [value, setValue] = useState('')
+    // const navigate = useNavigate()
+    const isLoading = false,
+        error = null,
+        cartProducts = [],
+        value = ''
     const nameRef = useRef<HTMLInputElement>(null)
     const cardRef = useRef<HTMLInputElement>(null)
 
@@ -28,17 +32,17 @@ const PaymentModal: FC<IProps> = ({ total, closeModal }) => {
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if (value.length == 19) {
-            dispatch(deleteProductAuth(''))
-        }
+        // if (value.length == 19) {
+        //     dispatch(deleteProductAuth(''))
+        // }
     }
 
     const backToMain = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         closeModal()
-        setTimeout(() => {
-            navigate(RoutesName.MAIN)
-        }, 200)
+        // setTimeout(() => {
+        //     navigate(RoutesName.MAIN)
+        // }, 200)
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +56,7 @@ const PaymentModal: FC<IProps> = ({ total, closeModal }) => {
 
         const formattedNumber = chunks ? chunks.join(' ') : ''
 
-        setValue(formattedNumber)
+        // setValue(formattedNumber)
         if (truncatedNumber.length === 16 && nameRef.current) {
             nameRef.current.focus()
         }

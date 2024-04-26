@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './Images.module.scss'
 import { FC, useEffect, useState } from 'react'
 import Image from '@/shared/ui/Image'
@@ -11,7 +11,8 @@ interface IProps {
 }
 
 const Images: FC<IProps> = ({ product }) => {
-    const { productDetail } = useAppSelector((state) => state.productReducer)
+    // const { productDetail } = useAppSelector((state) => state.productReducer)
+    const productDetail = { colors: [] }
     const colors = productDetail.colors.find((color) => color.name == product.color)
     const imgs = colors.images
 

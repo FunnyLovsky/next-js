@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './Sizes.module.scss'
 import { FC } from 'react'
 import AppButton from '@/shared/ui/AppButton'
@@ -14,9 +14,12 @@ interface IProps {
 }
 
 const Sizes: FC<IProps> = ({ onChange, product, productInCart }) => {
-    const { productDetail } = useAppSelector((state) => state.productReducer)
-    const { isLoading } = useAppSelector((state) => state.cartReducer)
-    const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    // const { productDetail } = useAppSelector((state) => state.productReducer)
+    // const { isLoading } = useAppSelector((state) => state.cartReducer)
+    // const { isLoading: authLoading } = useAppSelector((state) => state.authReducer)
+    const isLoading = false,
+        authLoading = false,
+        productDetail = { sizes: [] }
 
     const setSelectSize = () => {
         const size = productDetail.sizes.find((size) => size == productInCart.size)

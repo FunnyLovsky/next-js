@@ -1,5 +1,5 @@
 import styles from './Checkout.module.scss'
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import AppLink from '@/shared/ui/AppLink'
 import { RoutesName } from '@/app/providers/router'
 import AppButton from '@/shared/ui/AppButton'
@@ -11,8 +11,10 @@ interface IProps {
 }
 
 const Checkout: FC<IProps> = ({ openPayment }) => {
-    const { cartProducts } = useAppSelector((state) => state.cartReducer)
-    const { auth } = useAppSelector((state) => state.authReducer)
+    // const { cartProducts } = useAppSelector((state) => state.cartReducer)
+    // const { auth } = useAppSelector((state) => state.authReducer)
+    const auth = false,
+        cartProducts = []
     const { discount, subtotal, total } = getValueSum(cartProducts)
 
     return (

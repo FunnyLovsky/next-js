@@ -1,6 +1,6 @@
 import Container from '@/shared/ui/Container'
 import styles from './Account.module.scss'
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import AppButton from '@/shared/ui/AppButton'
 import PROFILE from '@/shared/assets/icons/profile.svg'
 import { useState } from 'react'
@@ -8,8 +8,9 @@ import Info from '../Info/Info'
 import Setting from '../Setting/Setting'
 
 const Account = () => {
-    const { user } = useAppSelector((state) => state.userReducer)
+    // const { user } = useAppSelector((state) => state.userReducer)
     const [isInfo, setIsInfo] = useState(true)
+    const user = { name: '' }
 
     return (
         <Container>

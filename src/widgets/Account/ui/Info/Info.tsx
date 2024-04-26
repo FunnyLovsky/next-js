@@ -1,9 +1,10 @@
 import AppInput from '@/shared/ui/AppInput'
 import styles from './Info.module.scss'
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 
 const Info = () => {
-    const { user } = useAppSelector((state) => state.userReducer)
+    // const { user } = useAppSelector((state) => state.userReducer)
+    const user = { name: '', email: '' }
 
     return (
         <div className={styles.cont}>

@@ -1,15 +1,16 @@
 // import styles from './Logout.module.scss'
-import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
-import { logoutUser } from '@/entities/User'
+// import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { logoutUser } from '@/entities/User'
 import AppButton from '@/shared/ui/AppButton'
 import LoaderBtn from '@/shared/ui/LoaderBtn'
 
 const Logout = () => {
-    const dispatch = useAppDispatch()
-    const { isLoading } = useAppSelector((state) => state.userReducer)
+    // const dispatch = useAppDispatch()
+    // const { isLoading } = useAppSelector((state) => state.userReducer)
+    const isLoading = false
 
     const onLogout = () => {
-        dispatch(logoutUser())
+        // dispatch(logoutUser())
     }
 
     return (

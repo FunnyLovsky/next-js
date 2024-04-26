@@ -1,4 +1,4 @@
-import { FC, forwardRef } from 'react'
+import { ForwardRefExoticComponent, RefAttributes, forwardRef } from 'react'
 import styles from './AppInput.module.scss'
 import SEACRH from '@/shared/assets/icons/search.svg'
 import EMAIL from '@/shared/assets/icons/email_2.svg'
@@ -28,43 +28,44 @@ const icons = {
     card: CARD,
 }
 
-const AppInput: FC<IProps> = forwardRef<HTMLInputElement, IProps>(function AppInput(props, ref) {
-    const {
-        icon,
-        type,
-        onChange,
-        onFocus,
-        placeholder,
-        value,
-        iconOnClick,
-        isLoading,
-        disabled,
-        required,
-    } = props
-    const Icon = icons[icon]
+const AppInput: ForwardRefExoticComponent<Omit<IProps, 'ref'> & RefAttributes<HTMLInputElement>> =
+    forwardRef<HTMLInputElement, IProps>(function AppInput(props, ref) {
+        const {
+            icon,
+            type,
+            onChange,
+            onFocus,
+            placeholder,
+            value,
+            iconOnClick,
+            isLoading,
+            disabled,
+            required,
+        } = props
+        const Icon = icons[icon]
 
-    return (
-        <div className={styles.input}>
-            <div className={styles.icon}>
-                {isLoading ? (
-                    <span className={styles.loader}></span>
-                ) : (
-                    <Icon onClick={iconOnClick} />
-                )}
+        return (
+            <div className={styles.input}>
+                <div className={styles.icon}>
+                    {isLoading ? (
+                        <span className={styles.loader}></span>
+                    ) : (
+                        <Icon onClick={iconOnClick} />
+                    )}
+                </div>
+
+                <input
+                    value={value}
+                    ref={ref}
+                    type={type}
+                    placeholder={placeholder}
+                    onChange={onChange}
+                    onFocus={onFocus}
+                    disabled={disabled}
+                    required={required}
+                />
             </div>
-
-            <input
-                value={value}
-                ref={ref}
-                type={type}
-                placeholder={placeholder}
-                onChange={onChange}
-                onFocus={onFocus}
-                disabled={disabled}
-                required={required}
-            />
-        </div>
-    )
-})
+        )
+    })
 
 export default AppInput

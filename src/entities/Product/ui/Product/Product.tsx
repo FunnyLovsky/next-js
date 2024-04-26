@@ -19,7 +19,7 @@ const Product: FC<IProps> = ({ data, catalog = null }) => {
     return (
         <Link href={`${path}/${data.url}`} className={styles.product}>
             <div className={styles.img}>
-                <Image src={data.image} />
+                <Image src={data.image} alt="" />
             </div>
             <Info data={data} type="small" />
             <Price data={data} type="small" />

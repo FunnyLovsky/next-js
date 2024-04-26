@@ -1,6 +1,6 @@
 import Container from '@/shared/ui/Container'
 import styles from './CartProduct.module.scss'
-import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import Product from '../Product/Product'
 import LoaderPage from '@/shared/ui/LoaderPage'
 import { Checkout, getValueSum } from '@/features/Checkout'
@@ -12,8 +12,10 @@ import { useRef } from 'react'
 import { ModalOptions } from '@/shared/types/ModalOptions'
 
 const CartProduct = () => {
-    const { cartProducts } = useAppSelector((state) => state.cartReducer)
-    const { isLoading } = useAppSelector((state) => state.authReducer)
+    // const { cartProducts } = useAppSelector((state) => state.cartReducer)
+    // const { isLoading } = useAppSelector((state) => state.authReducer)
+    const isLoading = false,
+        cartProducts = []
     const paymentRef = useRef<ModalOptions>(null)
     const { total } = getValueSum(cartProducts)
 
