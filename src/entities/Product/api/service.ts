@@ -28,18 +28,17 @@ export class Services {
             const cache = await caches.open('getProducts')
 
             const cachedResponse = await cache.match(url)
-    
-            if(cachedResponse) {
-                return await cachedResponse.json();
+
+            if (cachedResponse) {
+                return await cachedResponse.json()
             }
-    
+
             const response = await this.getProducts(query)
-            console.log(response.headers);
-            
+            console.log(response.headers)
+
             await cache.put(url, new Response(JSON.stringify(response)))
- 
+
             return response
-            
         } catch (error) {
             throw new Error(error.message)
         }

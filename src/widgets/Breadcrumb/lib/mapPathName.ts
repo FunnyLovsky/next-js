@@ -2,7 +2,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { pathCategory } from '../const/pathCategory'
 import { routePaths } from '../const/routePaths'
 
-export const mapPathName = (pathname: string, search:  ParsedUrlQuery) => {
+export const mapPathName = (pathname: string, search: ParsedUrlQuery) => {
     const crumbs = pathname
         .split('/')
         .filter((path) => routePaths[`/${path}`])
@@ -11,13 +11,12 @@ export const mapPathName = (pathname: string, search:  ParsedUrlQuery) => {
             title: routePaths[`/${path}`],
         }))
 
+    const paths: { to: string; title: string }[] = []
 
-    const paths: {to: string, title: string}[] = []
+    const { gender, category, name } = search
 
-    const {gender, category, name} = search
-
-    if (gender && !Array.isArray(gender) ) {
-            paths.push({ to: `${pathname}?gender=${gender}`, title: pathCategory[gender] })
+    if (gender && !Array.isArray(gender)) {
+        paths.push({ to: `${pathname}?gender=${gender}`, title: pathCategory[gender] })
     }
 
     if (category && !Array.isArray(category)) {
@@ -35,6 +34,6 @@ export const mapPathName = (pathname: string, search:  ParsedUrlQuery) => {
     }
 
     crumbs.push(...paths)
-    
+
     return crumbs
 }

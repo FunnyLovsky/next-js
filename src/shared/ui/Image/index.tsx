@@ -5,9 +5,10 @@ import NOT_FOUND from '@/shared/assets/icons/image.svg'
 
 interface IProps {
     src: string
+    alt: string
 }
 
-const Image: FC<IProps> = ({ src }) => {
+const Image: FC<IProps> = ({ src, alt }) => {
     const [isLoad, setIsLoad] = useState(true)
     const [error, setError] = useState(false)
 
@@ -20,7 +21,7 @@ const Image: FC<IProps> = ({ src }) => {
             ) : (
                 <img
                     src={`${SERVER_URL}/${src}`}
-                    alt=""
+                    alt={alt}
                     onLoad={() => setIsLoad(false)}
                     onError={() => setError(true)}
                     loading="lazy"

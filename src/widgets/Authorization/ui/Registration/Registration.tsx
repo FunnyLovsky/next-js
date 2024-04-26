@@ -1,5 +1,5 @@
 import AppInput from '@/shared/ui/AppInput'
-// import styles from './Registration.module.scss'
+import styles from './Registration.module.scss'
 import AppForm from '@/shared/ui/AppForm'
 // import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import { useState } from 'react'

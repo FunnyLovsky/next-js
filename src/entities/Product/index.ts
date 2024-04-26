@@ -10,7 +10,7 @@ import Loader from './ui/Loader/Loader'
 import Price from './ui/Price/Price'
 import Product from './ui/Product/Product'
 
-export {useFetchProducts}
+export { useFetchProducts }
 // export {
 //     productListSlice as productListReducer,
 //     setPage,

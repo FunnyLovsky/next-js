@@ -7,7 +7,7 @@ import ProfileIcon from './ui/ProfileIcon/ProfileIcon'
 // import authSlice from './model/slice/authSlice'
 // import { registUser } from './model/sevices/registr'
 
-export {ProfileIcon}
+export { ProfileIcon }
 // export {
 //     ProfileIcon,
 //     authUser,

@@ -11,7 +11,6 @@ export class Services {
             return $api.get<AuthResponse>(`/user/auth`)
         } catch (error) {
             return errorHandler(error)
-            
         }
     }
 
@@ -51,7 +50,7 @@ export class Services {
             })
             return response
         } catch (error) {
-           return errorHandler(error)
+            return errorHandler(error)
         }
     }
 

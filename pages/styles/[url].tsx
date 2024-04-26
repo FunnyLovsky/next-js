@@ -1,5 +1,3 @@
-import { NavLayout } from '@/widgets/NavLayout'
-import { Head } from 'next/document'
 import { useRouter } from 'next/router'
 
 export default function ShopID() {

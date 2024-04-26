@@ -1,1 +1,1 @@
-export {default as MetaLayout} from './ui/MetaLayout'
+export { default as MetaLayout } from './ui/MetaLayout'

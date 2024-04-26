@@ -33,12 +33,12 @@ const Images: FC<IProps> = ({ product }) => {
                         onClick={() => onChangeImg(img)}
                         className={img == selectImg ? styles.active : styles.btn}
                     >
-                        <Image src={img} />
+                        <Image src={img} alt="" />
                     </button>
                 ))}
             </div>
             <div className={styles.main}>
-                <Image src={selectImg} />
+                <Image src={selectImg} alt="" />
             </div>
         </div>
     )
