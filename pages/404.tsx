@@ -1,7 +1,12 @@
-export default function NotFound() {
+import NotFound from '@/shared/ui/NotFound'
+import SEARCH from '@/shared/assets/icons/search.svg'
+
+export default function Error() {
     return (
-        <>
-            <h1>Not found</h1>
-        </>
+        <NotFound
+            title="Произошла ошибка!"
+            subtitle="Пожалуйста, проверьте правильность запроса или вернитесь к списку товаров"
+            icon={SEARCH}
+        />
     )
 }
