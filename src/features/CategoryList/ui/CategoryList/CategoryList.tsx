@@ -14,12 +14,16 @@ import { ModalOptions } from '@/shared/types/ModalOptions'
 import { useRouter } from 'next/router'
 
 const CategoryList = () => {
-    const { pathname, search } = new Location()
+    const { pathname, query } = useRouter()
     const filterRef = useRef<ModalOptions>(null)
     // const { error, isLoading, products, totalCount, limit } = useAppSelector(
     //     (state) => state.productListReducer
     // )
-
+    const error = null,
+        isLoading = true,
+        limit = 9,
+        totalCount = 5,
+        products = []
     const renderList = () => {
         if (error)
             return (
@@ -51,7 +55,7 @@ const CategoryList = () => {
         )
     }
 
-    const title = mapPathName(pathname, search).pop()
+    const title = mapPathName(pathname, query).pop()
 
     return (
         <div className={styles.cont_list}>

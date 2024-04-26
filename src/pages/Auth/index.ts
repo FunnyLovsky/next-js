@@ -1,5 +1,3 @@
-import { lazy } from 'react'
 
-const AuthPage = lazy(() => import('./ui/Auth'))
 
-export { AuthPage }
+export { default as AuthPage } from './ui/Auth'

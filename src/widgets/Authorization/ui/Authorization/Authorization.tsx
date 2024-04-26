@@ -4,24 +4,24 @@ import styles from './Authorization.module.scss'
 import AppButton from '@/shared/ui/AppButton'
 import Login from '../Login/Login'
 import Registration from '../Registration/Registration'
-import { useAppDispatch } from '@/app/providers/StoreProvider/lib/hooks'
-import { clearError } from '@/entities/User'
+// import { useAppDispatch } from '@/app/providers/StoreProvider/lib/hooks'
+// import { clearError } from '@/entities/User'
 
 const Authoization = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
     useEffect(() => {
         document.title = 'GLAMIFY - Войти или зарегистрироваться'
     }, [])
 
     const onChangeLogin = () => {
         setIsLogin(true)
-        dispatch(clearError())
+        // dispatch(clearError())
     }
 
     const onChangeRegisrt = () => {
         setIsLogin(false)
-        dispatch(clearError())
+        // dispatch(clearError())
     }
 
     return (

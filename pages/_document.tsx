@@ -13,6 +13,7 @@ export default function Document() {
                 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
             </Head>
             <body>
+                <div id="modal" />
                 <Main />
                 <NextScript />
             </body>

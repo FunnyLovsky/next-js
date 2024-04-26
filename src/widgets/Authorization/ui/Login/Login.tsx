@@ -1,29 +1,31 @@
 import AppInput from '@/shared/ui/AppInput'
 // import styles from './Login.module.scss'
-import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
+// import { useAppDispatch, useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import { useState } from 'react'
-import { clearError, loginUser } from '@/entities/User'
+// import { clearError, loginUser } from '@/entities/User'
 import AppForm from '@/shared/ui/AppForm'
 
 const Login = () => {
-    const dispatch = useAppDispatch()
-    const { isLoading, error } = useAppSelector((state) => state.userReducer)
+    // const dispatch = useAppDispatch()
+    // const { isLoading, error } = useAppSelector((state) => state.userReducer)
+    const isLoading = false,
+        error = null
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const submit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        dispatch(loginUser({ email, password }))
+        // dispatch(loginUser({ email, password }))
     }
 
     const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
-        dispatch(clearError())
+        // dispatch(clearError())
     }
 
     const onChangePassowrd = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value)
-        dispatch(clearError())
+        // dispatch(clearError())
     }
 
     return (

@@ -34,6 +34,8 @@ export class Services {
             }
     
             const response = await this.getProducts(query)
+            console.log(response.headers);
+            
             await cache.put(url, new Response(JSON.stringify(response)))
  
             return response

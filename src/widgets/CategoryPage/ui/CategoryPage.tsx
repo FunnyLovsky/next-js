@@ -33,7 +33,7 @@ const CategoryPage = () => {
         <Container>
             <div className={styles.cont}>
                 <FilterProducts />
-                {/* <CategoryList /> */}
+                <CategoryList />
             </div>
         </Container>
     )

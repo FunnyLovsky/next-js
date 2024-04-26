@@ -1,13 +1,10 @@
-import Head from 'next/head'
-
-import { NavLayout } from '@/widgets/NavLayout'
-import { Footer } from '@/widgets/Footer'
 import { MetaLayout } from '@/widgets/MetaLayout'
+import { CategoryPage } from '@/pages/Category'
 
 const Styles = () => {
     return (
         <MetaLayout title="GLAMIFY - Популярные товары для стильного образа">
-            <h1>Styles Page</h1>
+            <CategoryPage />
         </MetaLayout>
     )
 }
