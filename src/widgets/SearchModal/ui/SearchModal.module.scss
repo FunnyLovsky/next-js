@@ -39,6 +39,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 
