@@ -1,31 +1,19 @@
 // import { useAppSelector } from '@/app/providers/StoreProvider/lib/hooks'
 import styles from './InfoProduct.module.scss'
-import { Info, Price } from '@/entities/Product'
+import { IProductDetail, Info, Price } from '@/entities/Product'
 import Images from '../Images/Images'
 import Colors from '../Colors/Colors'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import Sizes from '../Sizes/Sizes'
 import CartController from '../CartController/CartController'
 
-const InfoProduct = () => {
-    // const { productDetail } = useAppSelector((state) => state.productReducer)
+interface IProps {
+    productDetail: IProductDetail
+}
+
+const InfoProduct: FC<IProps> = ({ productDetail }) => {
     // const { cartProducts } = useAppSelector((state) => state.cartReducer)
-    const productDetail = {
-            id: '',
-            name: '',
-            image: '',
-            rating: 0,
-            price: 0,
-            discount: null,
-            category: '',
-            gender: '',
-            style: '',
-            description: '',
-            sizes: [],
-            details: [[]],
-            colors: [],
-        },
-        cartProducts = []
+    const cartProducts = []
     const [product, setProduct] = useState({
         color: productDetail.colors[0].name,
         size: productDetail.sizes[0],
@@ -48,14 +36,24 @@ const InfoProduct = () => {
 
     return (
         <div className={styles.cont}>
-            <Images product={product} />
+            <Images product={product} productDetail={productDetail} />
             <div className={styles.info}>
-                {/* <Info data={productDetail} type="big" />
-                <Price data={productDetail} type="big" /> */}
+                <Info data={productDetail} type="big" />
+                <Price data={productDetail} type="big" />
                 <p className={styles.description}>{productDetail.description}</p>
 
-                <Colors product={product} onChange={onChangeColor} productInCart={productInCart} />
-                <Sizes product={product} onChange={onChangeSize} productInCart={productInCart} />
+                <Colors
+                    product={product}
+                    onChange={onChangeColor}
+                    productInCart={productInCart}
+                    productDetail={productDetail}
+                />
+                <Sizes
+                    product={product}
+                    onChange={onChangeSize}
+                    productInCart={productInCart}
+                    productDetail={productDetail}
+                />
                 <CartController product={product} productInCart={productInCart} />
             </div>
         </div>

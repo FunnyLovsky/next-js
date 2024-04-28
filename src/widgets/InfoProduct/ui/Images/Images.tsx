@@ -3,16 +3,18 @@
 import styles from './Images.module.scss'
 import { FC, useEffect, useState } from 'react'
 import Image from '@/shared/ui/Image'
+import { IProductDetail } from '@/entities/Product'
 
 type Product = { color: string; size: string }
 
 interface IProps {
     product: Product
+    productDetail: IProductDetail
 }
 
-const Images: FC<IProps> = ({ product }) => {
+const Images: FC<IProps> = ({ product, productDetail }) => {
     // const { productDetail } = useAppSelector((state) => state.productReducer)
-    const productDetail = { colors: [] }
+
     const colors = productDetail.colors.find((color) => color.name == product.color)
     const imgs = colors.images
 
