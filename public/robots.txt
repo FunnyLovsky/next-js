@@ -1,0 +1,16 @@
+Host: glamify-store-shop.vercel.app
+User-agent: *
+Disallow: /cart/
+Disallow: /auth/
+Disallow: /profile/
+Disallow: /404/
+
+Allow: /shop/
+Allow: /sales/
+Allow: /arrivals/
+Allow: /styles/
+
+Allow: /shop/[A-Za-z0-9]+
+Allow: /sales/[A-Za-z0-9]+
+Allow: /arrivals/[A-Za-z0-9]+
+Allow: /styles/[A-Za-z0-9]+
