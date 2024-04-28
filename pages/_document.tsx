@@ -16,6 +16,10 @@ export default function Document() {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 <meta name="yandex-verification" content="9e207b9544950d43" />
+                <meta
+                    name="google-site-verification"
+                    content="X9snEyaEKfPy_2O8DYPWEo7O2Dw3pdXRimMWwMbzanM"
+                />
             </Head>
             <body>
                 <div id="modal" />
