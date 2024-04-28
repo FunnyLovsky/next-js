@@ -15,7 +15,7 @@ import { IProductDetail } from '@/entities/Product'
 
 interface IProps {
     productDetail: IProductDetail | null
-    error: null | string
+    error?: null | string
 }
 const ProductDetail: FC<IProps> = ({ productDetail, error = null }) => {
     // const { productURL } = useParams()
