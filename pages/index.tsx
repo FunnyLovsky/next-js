@@ -4,7 +4,10 @@ import { MetaLayout } from '@/widgets/MetaLayout'
 
 const Index = () => {
     return (
-        <MetaLayout title="GLAMIFY - Модные тренды в мире одежды">
+        <MetaLayout
+            title="Брендовая одежда GLAMIFY - Мода, стиль и качество"
+            description="Погрузитесь в мир стиля и качества с GLAMIFY. Новые коллекции, акции и скидки на одежду от лучших брендов."
+        >
             <MainPage />
         </MetaLayout>
     )
