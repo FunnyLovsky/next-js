@@ -1,5 +1,6 @@
 import { IProductDetail, Services } from '@/entities/Product'
 import { ProductDetailPage } from '@/pages/ProductDetail'
+import { SERVER_URL } from '@/shared/const/URL'
 import { MetaLayout } from '@/widgets/MetaLayout'
 import { FC } from 'react'
 
@@ -24,7 +25,11 @@ const ShopID: FC<IProps> = ({ product, error }) => {
     }
 
     return (
-        <MetaLayout title={`${product.name} - GLAMIFY`}>
+        <MetaLayout
+            title={`${product.name} - Купить онлайн на GLAMIFY`}
+            description={product.description}
+            image={`${SERVER_URL}/${product.image}`}
+        >
             <ProductDetailPage productDetail={product} />
         </MetaLayout>
     )
