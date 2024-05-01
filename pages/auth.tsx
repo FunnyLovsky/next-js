@@ -1,15 +1,12 @@
-import Head from 'next/head'
 import React from 'react'
 import { AuthPage } from '@/pages/Auth'
+import { MetaLayout } from '@/widgets/MetaLayout'
 
 const Auth = () => {
     return (
-        <>
-            <Head>
-                <title>GLAMIFY - Войти или зарегистрироваться</title>
-            </Head>
+        <MetaLayout title="GLAMIFY - Войти или зарегистрироваться" noIndex={true}>
             <AuthPage />
-        </>
+        </MetaLayout>
     )
 }
 
