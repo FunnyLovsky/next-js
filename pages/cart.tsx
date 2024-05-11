@@ -1,6 +1,5 @@
 import React from 'react'
 import { CartPage } from '@/pages/Cart'
-
 import { MetaLayout } from '@/widgets/MetaLayout'
 import { SuspenseWrapper } from '@/app/providers/router'
 
