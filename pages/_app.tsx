@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import type { AppProps } from 'next/app'
 import '../src/app/styles/index.scss'
 import { NavLayout } from '@/widgets/NavLayout'
