@@ -1,7 +1,6 @@
 import { MainPage } from '@/pages/Main'
 import React from 'react'
 import { MetaLayout } from '@/widgets/MetaLayout'
-import { SuspenseWrapper } from '@/app/providers/router'
 
 const Index = () => {
     return (
